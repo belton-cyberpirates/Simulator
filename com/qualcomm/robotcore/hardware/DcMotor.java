@@ -1,6 +1,12 @@
 package com.qualcomm.robotcore.hardware;
 
-public class DcMotor {
+import com.qualcomm.robotcore.hardware.HardwareDevice;
+
+public class DcMotor extends HardwareDevice {
+    public DcMotor(String name) {
+        super(name);
+    }
+
     public static enum RunMode {
         DEFAULT,
         STOP_AND_RESET_ENCODER,
