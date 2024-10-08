@@ -7,6 +7,8 @@ public class DcMotorEx {
     DcMotor.ZeroPowerBehavior zeroPowerBehavior = DcMotor.ZeroPowerBehavior.DEFAULT;
 
     public void setTargetPosition(int position) {
+        assert (position != 0 && this.runMode != DcMotor.RunMode.RUN_TO_POSITION) : 
+            "Trying to set non-zero target position before setting runMode to RUN_TO_POSITION.\nTry calling motor.setMode(DcMotor.RunMode.RUN_TO_POSITION);";
         System.out.println(this + " moving to " + position);
     }
 
