@@ -1,35 +1,26 @@
-/*package org.firstinspires.ftc.teamcode;
+// package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
-import org.firstinspires.ftc.vision.tfod.TfodProcessor;
-import org.firstinspires.ftc.vision.VisionPortal;
-import org.firstinspires.ftc.robotcore.external.hardware.camera.WebcamName;
-import org.firstinspires.ftc.robotcore.external.tfod.Recognition;
-import org.firstinspires.ftc.vision.tfod.TfodProcessor;
-import org.firstinspires.ftc.vision.VisionPortal;
-import org.firstinspires.ftc.robotcore.external.hardware.camera.WebcamName;
-import org.firstinspires.ftc.robotcore.external.tfod.Recognition;
-import org.firstinspires.ftc.vision.tfod.TfodProcessor;
-import org.firstinspires.ftc.vision.VisionPortal;
+// import org.firstinspires.ftc.vision.tfod.TfodProcessor;
+// import org.firstinspires.ftc.vision.VisionPortal;
+// import org.firstinspires.ftc.robotcore.external.hardware.camera.WebcamName;
+// import org.firstinspires.ftc.robotcore.external.tfod.Recognition;
+// import org.firstinspires.ftc.vision.tfod.TfodProcessor;
+// import org.firstinspires.ftc.vision.VisionPortal;
 import org.firstinspires.ftc.robotcore.external.navigation.AngleUnit;
-import org.firstinspires.ftc.robotcore.external.hardware.camera.WebcamName;
-import org.firstinspires.ftc.robotcore.external.tfod.Recognition;
+// import org.firstinspires.ftc.robotcore.external.hardware.camera.WebcamName;
+// import org.firstinspires.ftc.robotcore.external.tfod.Recognition;
+import com.qualcomm.robotcore.hardware.IMU;
 import com.qualcomm.robotcore.hardware.DcMotorEx;
-import org.firstinspires.ftc.robotcore.external.Telemetry;
-import org.firstinspires.ftc.robotcore.external.JavaUtil;
-import org.firstinspires.ftc.robotcore.external.Telemetry;
+// import org.firstinspires.ftc.robotcore.external.Telemetry;
+// import org.firstinspires.ftc.robotcore.external.JavaUtil;
+// import org.firstinspires.ftc.robotcore.external.Telemetry;
 
-import org.firstinspires.ftc.teamcode.Arm;
-import org.firstinspires.ftc.teamcode.Config;
-import org.firstinspires.ftc.teamcode.DriveMotors;
-import org.firstinspires.ftc.teamcode.ObjectDetection;
-import org.firstinspires.ftc.teamcode.Heading;*/
-
-import Arm;
-import Config;
-import DriveMotors;
-import ObjectDetection;
-import Heading;
+// import org.firstinspires.ftc.teamcode.Arm;
+// import org.firstinspires.ftc.teamcode.Config;
+// import org.firstinspires.ftc.teamcode.DriveMotors;
+// import org.firstinspires.ftc.teamcode.ObjectDetection;
+// import org.firstinspires.ftc.teamcode.Heading;
 
 import java.util.List;
 
@@ -45,13 +36,14 @@ public abstract class Auto extends LinearOpMode {
 	 * Initialize classes used by autos
 	 */
 	protected void Initialize() {
-		driveMotors = new DriveMotors(this);
-		arm = new Arm(this);
-		intake = new Intake(this);
-		camera = new ObjectDetection(this);
+		this.driveMotors = new DriveMotors(this);
+		this.arm = new Arm(this);
+		this.intake = new Intake(this);
+		this.camera = new ObjectDetection(this);
+		this.heading = new Heading();
 
-		imu = hardwareMap.get(IMU.class, "imu");
-		imu.resetYaw();
+		this.imu = hardwareMap.get(IMU.class, "imu");
+		this.imu.resetYaw();
 	}
 
 	/**

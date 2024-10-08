@@ -1,30 +1,18 @@
-/*package org.firstinspires.ftc.teamcode;
+// package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import org.firstinspires.ftc.robotcore.external.hardware.camera.CameraName;
 import org.firstinspires.ftc.vision.tfod.TfodProcessor;
 import org.firstinspires.ftc.vision.VisionPortal;
-import org.firstinspires.ftc.robotcore.external.hardware.camera.WebcamName;
+// import org.firstinspires.ftc.robotcore.external.hardware.camera.WebcamName;
 import org.firstinspires.ftc.robotcore.external.tfod.Recognition;
-import org.firstinspires.ftc.vision.tfod.TfodProcessor;
-import org.firstinspires.ftc.vision.VisionPortal;
-import org.firstinspires.ftc.robotcore.external.hardware.camera.WebcamName;
-import org.firstinspires.ftc.robotcore.external.tfod.Recognition;
-import org.firstinspires.ftc.vision.tfod.TfodProcessor;
-import org.firstinspires.ftc.vision.VisionPortal;
-import org.firstinspires.ftc.robotcore.external.hardware.camera.WebcamName;
-import org.firstinspires.ftc.robotcore.external.tfod.Recognition;
-import com.qualcomm.robotcore.hardware.DcMotorEx;
-import org.firstinspires.ftc.robotcore.external.Telemetry;
-import org.firstinspires.ftc.robotcore.external.JavaUtil;
-import org.firstinspires.ftc.robotcore.external.Telemetry;
+// import org.firstinspires.ftc.robotcore.external.Telemetry;
+// import org.firstinspires.ftc.robotcore.external.JavaUtil;
+// import org.firstinspires.ftc.robotcore.external.Telemetry;
 
-import org.firstinspires.ftc.teamcode.Config;*/
-
-import Config;
+// import org.firstinspires.ftc.teamcode.Config;
 
 import java.util.List;
-
 
 
 public class ObjectDetection {
@@ -34,7 +22,7 @@ public class ObjectDetection {
 
 
 	public ObjectDetection(LinearOpMode auto) {
-		this.auto = auto;
+		/*this.auto = auto;
 
 		// Create the TensorFlow processor by using a builder.
 		tfod = new TfodProcessor.Builder()
@@ -52,11 +40,11 @@ public class ObjectDetection {
 		builder.addProcessor(tfod);
 
 		// Build the Vision Portal, using the above settings.
-		visionPortal = builder.build();
+		visionPortal = builder.build();*/
 	}
 
 
-	public int GetPropPos() { // 0 = left, 1 = center, 2 = right
+	/*public int GetPropPos() { // 0 = left, 1 = center, 2 = right
 		Recognition recognition = highestConfidence();
 
 		if (recognition != null) {
@@ -93,5 +81,5 @@ public class ObjectDetection {
 			return recognition;
 		}
 		return recognition;
-	}
+	}*/
 }

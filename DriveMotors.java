@@ -1,20 +1,18 @@
-/*package org.firstinspires.ftc.teamcode;
+// package org.firstinspires.ftc.teamcode;
 
+import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorEx;
 import org.firstinspires.ftc.robotcore.external.navigation.Orientation;
-import org.firstinspires.ftc.robotcore.external.JavaUtil;
-import org.firstinspires.ftc.robotcore.external.navigation.AxesOrder;
-import org.firstinspires.ftc.robotcore.external.navigation.AngleUnit;
-import org.firstinspires.ftc.robotcore.external.navigation.AxesReference;
-import org.firstinspires.ftc.robotcore.external.navigation.Orientation;
-import com.qualcomm.robotcore.hardware.AnalogInput;
+// import org.firstinspires.ftc.robotcore.external.JavaUtil;
+// import org.firstinspires.ftc.robotcore.external.navigation.AxesOrder;
+// import org.firstinspires.ftc.robotcore.external.navigation.AngleUnit;
+// import org.firstinspires.ftc.robotcore.external.navigation.AxesReference;
+// import org.firstinspires.ftc.robotcore.external.navigation.Orientation;
+// import com.qualcomm.robotcore.hardware.AnalogInput;
 
-import org.firstinspires.ftc.teamcode.Direction;
-import org.firstinspires.ftc.teamcode.Config;*/
-
-import Direction;
-import Config;
+// import org.firstinspires.ftc.teamcode.Direction;
+// import org.firstinspires.ftc.teamcode.Config;
 
 
 public class DriveMotors {
@@ -71,10 +69,10 @@ public class DriveMotors {
 
   private void MotorInitTurn() {
     this.Reset();
-    this.frontLeft.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODERS);
-    this.frontRight.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODERS);
-    this.backLeft.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODERS);
-    this.backRight.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODERS);
+    this.frontLeft.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+    this.frontRight.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+    this.backLeft.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+    this.backRight.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
   }
 
   

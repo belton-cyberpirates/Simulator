@@ -1,45 +1,39 @@
-/*package org.firstinspires.ftc.teamcode;
+// package org.firstinspires.ftc.teamcode;
 
-import org.firstinspires.ftc.robotcore.external.hardware.camera.BuiltinCameraDirection;
-import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
-import org.firstinspires.ftc.robotcore.external.tfod.Recognition;
-import org.firstinspires.ftc.vision.tfod.TfodProcessor;
-import org.firstinspires.ftc.vision.VisionPortal;
-import com.qualcomm.robotcore.hardware.Servo;
-import org.firstinspires.ftc.vision.apriltag.AprilTagDetection;
-import com.qualcomm.robotcore.hardware.DcMotorEx;
-import org.firstinspires.ftc.robotcore.external.Telemetry;
-import com.qualcomm.hardware.bosch.BNO055IMU;
-import org.firstinspires.ftc.robotcore.external.navigation.AxesReference;
-import org.firstinspires.ftc.robotcore.external.navigation.AngleUnit;
-import org.firstinspires.ftc.robotcore.external.navigation.Orientation;
+// import org.firstinspires.ftc.robotcore.external.hardware.camera.BuiltinCameraDirection;
+// import com.qualcomm.robotcore.eventloop.opmode.Autonomous;
+// import org.firstinspires.ftc.robotcore.external.tfod.Recognition;
+// import org.firstinspires.ftc.vision.tfod.TfodProcessor;
+// import org.firstinspires.ftc.vision.VisionPortal;
+// import com.qualcomm.robotcore.hardware.Servo;
+// import org.firstinspires.ftc.vision.apriltag.AprilTagDetection;
+// import com.qualcomm.robotcore.hardware.DcMotorEx;
+// import org.firstinspires.ftc.robotcore.external.Telemetry;
+// import com.qualcomm.hardware.bosch.BNO055IMU;
+// import org.firstinspires.ftc.robotcore.external.navigation.AxesReference;
+// import org.firstinspires.ftc.robotcore.external.navigation.AngleUnit;
+// import org.firstinspires.ftc.robotcore.external.navigation.Orientation;
+// import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
+// import org.firstinspires.ftc.robotcore.external.JavaUtil;
+// import org.firstinspires.ftc.robotcore.external.hardware.camera.WebcamName;
+// import org.firstinspires.ftc.robotcore.external.navigation.AxesOrder;
+// import org.openftc.easyopencv.OpenCvCamera;
+// import org.openftc.easyopencv.OpenCvCameraRotation;
+// import org.openftc.easyopencv.OpenCvInternalCamera;
+// import org.openftc.easyopencv.OpenCvInternalCamera2;
+
+// import org.firstinspires.ftc.teamcode.DriveMotors;
+// import org.firstinspires.ftc.teamcode.Arm;
+// import org.firstinspires.ftc.teamcode.Direction;
+// import org.firstinspires.ftc.teamcode.Config;
+// import org.firstinspires.ftc.teamcode.Auto;
+
 import java.util.Set;
 import java.util.ArrayList;
-import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
-import com.qualcomm.robotcore.hardware.DcMotor;
 import java.util.List;
-import org.firstinspires.ftc.robotcore.external.JavaUtil;
-import org.firstinspires.ftc.robotcore.external.hardware.camera.WebcamName;
-import org.firstinspires.ftc.robotcore.external.navigation.AxesOrder;
-import org.openftc.easyopencv.OpenCvCamera;
-import org.openftc.easyopencv.OpenCvCameraRotation;
-import org.openftc.easyopencv.OpenCvInternalCamera;
-import org.openftc.easyopencv.OpenCvInternalCamera2;
-
-import org.firstinspires.ftc.teamcode.DriveMotors;
-import org.firstinspires.ftc.teamcode.Arm;
-import org.firstinspires.ftc.teamcode.Direction;
-import org.firstinspires.ftc.teamcode.Config;
-import org.firstinspires.ftc.teamcode.Auto;*/
-
-import DriveMotors;
-import Arm;
-import Direction;
-import Config;
-import Auto;
 
 
-@Autonomous(name = "AutoBlueRight", preselectTeleOp="MecanumDriveFieldCentric")
+@Autonomous(name="AutoBlueRight", preselectTeleOp="MecanumDriveFieldCentric")
 public class AutoBlueRight extends Auto {
 	/**
 	 * This function is executed when this Op Mode is initialized from the Driver Station.
@@ -50,7 +44,7 @@ public class AutoBlueRight extends Auto {
 
 		waitForStart();
 
-		int position = camera.GetPropPos();
+		int position = 0 //camera.GetPropPos();
 
 		if (opModeIsActive()) { // <----------------------------------------------------------------
 			MotorSetup(); // arm between 0 and -2500
