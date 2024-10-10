@@ -7,6 +7,8 @@ public class DcMotor extends HardwareDevice {
         super(name);
     }
 
+    public void process(double delta) {}
+
     public static enum RunMode {
         DEFAULT,
         STOP_AND_RESET_ENCODER,

@@ -8,6 +8,8 @@ public class Servo extends HardwareDevice {
         super(name);
     }
 
+    public void process(double delta) {}
+
     public void setPosition(double pos) {
         
     }

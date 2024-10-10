@@ -11,6 +11,8 @@ public class IMU extends HardwareDevice {
         super(name);
     }
 
+    public void process(double delta) {}
+
     public void resetYaw() {
         this.yaw = 0;
     }
