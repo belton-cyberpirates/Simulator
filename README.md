@@ -11,7 +11,7 @@ import simulatorlib.Simulator;
 public static class Main {
   public static void main(String[] args) {
     Simulator simulator = new Simulator();
-    AutoBlueLeft auto = new AutoBlueLeft(); //
+    AutoBlueLeft auto = new AutoBlueLeft();
     auto.runOpMode();
   }
 }
