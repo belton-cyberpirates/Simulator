@@ -2,23 +2,28 @@ package com.qualcomm.robotcore.hardware;
 
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.HardwareDevice;
+import simulatorlib.SimConfig;
 
 public class DcMotorEx extends HardwareDevice {
-    private final static int TARGET_COMFORT_DIST = 10;
+    static final int TARGET_COMFORT_DIST = 10;
 
-    private DcMotor.RunMode runMode = DcMotor.RunMode.DEFAULT;
-    private DcMotor.ZeroPowerBehavior zeroPowerBehavior = DcMotor.ZeroPowerBehavior.DEFAULT;
+    static PIDController _PIDController = new PIDController(SimConfig.DcMotorEx_PID_CONFIG)
+
+    DcMotor.RunMode runMode = DcMotor.RunMode.DEFAULT;
+    DcMotor.ZeroPowerBehavior zeroPowerBehavior = DcMotor.ZeroPowerBehavior.DEFAULT;
     
-    private int currentPosition = 0;
-    private int targetPosition;
-    private int velocity;
-    private double power;
+    int currentPosition = 0;
+    int targetPosition = 0;
+    int velocity = 0;
+    double power = 0;
 
     public DcMotorEx(String name) {
         super(name);
     }
 
-    public void process(double delta) {}
+    public void process(double delta) {
+        if (!this.isBusy()) return
+    }
 
     public void setTargetPosition(int targetPosition) {
         assert (targetPosition != 0 && this.runMode != DcMotor.RunMode.RUN_TO_POSITION) : 
@@ -53,6 +58,10 @@ public class DcMotorEx extends HardwareDevice {
     public void setZeroPowerBehavior(DcMotor.ZeroPowerBehavior zeroPowerBehavior) {
         this.zeroPowerBehavior = zeroPowerBehavior;
         System.out.println("Setting " + this.name + "'s zero power behavior to " + zeroPowerBehavior);
+    }
+
+    public double getCurrentPosition() {
+        return this.currentPosition
     }
 
     public boolean isBusy() {
