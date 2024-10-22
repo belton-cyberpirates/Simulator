@@ -1,3 +1,5 @@
+package simulatorlib;
+
 public class PIDConfig {
     double Kp;
     double Ki;
