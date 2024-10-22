@@ -10,18 +10,22 @@ public class VisionPortal {
         CameraName camera;
         TfodProcessor processor;
 
-        public void setCamera(CameraName camera) {
+        public Builder setCamera(CameraName camera) {
             this.camera = camera;
+            return this;
         }
-        public void addProcessor(TfodProcessor processor) {
+        public Builder addProcessor(TfodProcessor processor) {
             this.processor = processor;
+            return this;
         }
         public VisionPortal build() {
             return new VisionPortal();
         }
-        public void setCamera(WebcamName webcamName) {
+        public Builder setCamera(WebcamName webcamName) {
+            return this;
         }
-        public void setCamera(BuiltinCameraDirection direction) {
+        public Builder setCamera(BuiltinCameraDirection direction) {
+            return this;
         }
     }
 
