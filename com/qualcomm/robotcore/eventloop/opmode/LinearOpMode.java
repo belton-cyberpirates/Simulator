@@ -2,8 +2,15 @@ package com.qualcomm.robotcore.eventloop.opmode;
 
 import com.qualcomm.robotcore.hardware.HardwareMap;
 
+import org.firstinspires.ftc.robotcore.external.Telemetry;
+
+import com.qualcomm.robotcore.hardware.Gamepad;
+
 public abstract class LinearOpMode {
     public HardwareMap hardwareMap;
+    public Gamepad gamepad1;
+    public Gamepad gamepad2;
+    public Telemetry telemetry;
 
     public LinearOpMode() {
         this.hardwareMap = new HardwareMap();
