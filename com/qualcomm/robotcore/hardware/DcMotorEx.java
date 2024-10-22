@@ -1,13 +1,12 @@
 package com.qualcomm.robotcore.hardware;
 
-import com.qualcomm.robotcore.hardware.DcMotor;
-import com.qualcomm.robotcore.hardware.HardwareDevice;
 import simulatorlib.SimConfig;
+import simulatorlib.PIDController;
 
 public class DcMotorEx extends HardwareDevice {
     static final int TARGET_COMFORT_DIST = 10;
 
-    static PIDController _PIDController = new PIDController(SimConfig.DcMotorEx_PID_CONFIG)
+    static PIDController _PIDController = new PIDController(SimConfig.DcMotorEx_PID_CONFIG);
 
     DcMotor.RunMode runMode = DcMotor.RunMode.DEFAULT;
     DcMotor.ZeroPowerBehavior zeroPowerBehavior = DcMotor.ZeroPowerBehavior.DEFAULT;
@@ -22,7 +21,20 @@ public class DcMotorEx extends HardwareDevice {
     }
 
     public void process(double delta) {
-        if (!this.isBusy()) return
+        if (!this.isBusy()) return;
+
+        switch (this.runMode) {
+            case DEFAULT:
+                break;
+            case RUN_TO_POSITION:
+                break;
+            case RUN_WITHOUT_ENCODER:
+                break;
+            case STOP_AND_RESET_ENCODER:
+                break;
+            default:
+                break;
+        }
     }
 
     public void setTargetPosition(int targetPosition) {
@@ -33,8 +45,8 @@ public class DcMotorEx extends HardwareDevice {
         System.out.println("moving " + this.name + " to " + this.targetPosition);
     }
 
-    public void setVelocity(int velocity) {
-        this.velocity = velocity;
+    public void setVelocity(double velocity) {
+        this.velocity = (int)velocity;
         System.out.println("Setting " + this.name + "'s velocity to " + velocity);
     }
 
@@ -48,9 +60,17 @@ public class DcMotorEx extends HardwareDevice {
         System.out.println("Setting " + this.name + "'s run mode to " + runMode);
 
         switch(runMode) {
-            case DcMotor.RunMode.STOP_AND_RESET_ENCODER:
+            case DEFAULT:
+                break;
+            case RUN_TO_POSITION:
+                break;
+            case RUN_WITHOUT_ENCODER:
+                break;
+            case STOP_AND_RESET_ENCODER:
                 this.currentPosition = 0;
                 this.targetPosition = 0;
+                break;
+            default:
                 break;
         }
     }
@@ -61,8 +81,12 @@ public class DcMotorEx extends HardwareDevice {
     }
 
     public double getCurrentPosition() {
-        return this.currentPosition
+        return this.currentPosition;
     }
+
+    // public double getCurrentPosition() {
+    //     return this.power * ;
+    // }
 
     public boolean isBusy() {
         return Math.abs(this.targetPosition - this.currentPosition) > TARGET_COMFORT_DIST;
