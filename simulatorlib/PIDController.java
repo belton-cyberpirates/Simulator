@@ -1,10 +1,14 @@
+package simulatorlib;
+
+import simulatorlib.PIDConfig;
+
 public class PIDController {
     double Kp;
     double Ki;
     double Kd;
 
-    double IntegralSum = 0
-    double lastError = 0
+    double integralSum = 0;
+    double lastError = 0;
 
     public PIDController(double Kp, double Ki, double Kd) {
         this.Kp = Kp;
